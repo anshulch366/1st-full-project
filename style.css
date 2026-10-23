@@ -1,3 +1,11 @@
+
+
+/* Universal class */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,57 +27,103 @@ a:hover {
 
 body {
     font-family: "Raleway", sans-serif;
-
 }
 
 .navbar {
     background-color: white;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     padding: 20px 0px;
     position: fixed;
-    top: 0px;
+    top: 0;
     z-index: 999;
+}
+
+.nav2 {
+    display: flex;
+    align-items: center;
+}
+
+.blank {
+    width: 50px;
 }
 
 .navlinks ul {
     display: flex;
-    gap: 60px;
-
+    gap: 42px;
+    align-items: center;
 }
 
-
-
 .navbutton button {
-    padding: 20px 35px;
+    padding: 15px 35px;
     border: none;
     border-radius: 25px;
     color: white;
     background-color: #4681f0;
-
 }
 
 .navbutton button:hover {
     background-color: #ffffff;
     color: #4681f0;
     border: 1px solid #4681f0;
-    /* cursor: pointer; */
 }
+
+.hidee {
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 909px) {
+
+    .navbar {
+        justify-content: space-around;
+    }
+
+    .hidee {
+        display: block;
+    }
+
+    .navlinks {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 4%;
+        width: 15%;
+        border: 1px solid black;
+        background-color: white;
+        padding: 20px;
+    }
+
+    .navlinks ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    
+
+    .navbutton button {
+        padding: 12px 20px;
+    }
+}
+
 
 /* hero section */
 .hero {
     background-image: url("./img/slider-image-3.jpg");
     background-size: cover;
     background-position: relative;
-    top: 0;
     height: 85vh;
+    width: 100%;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-color: white;
-    flex-wrap: wrap;
+    /* box-sizing: border-box; */
 
 
 }
@@ -77,15 +131,17 @@ body {
 .box1 {
     max-width: 450px;
     /* height: 230px; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     padding: 20px 40px;
     position: absolute;
+    
     top: 30%;
     left: 20%;
     background-color: white;
     border-radius: 5px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.158);
 }
+
 
 .herobutton button {
     padding: 15px 35px;
@@ -113,40 +169,31 @@ body {
 }
 
 /* cards  */
+
 .cards {
-    height: 300px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     padding: 80px 0;
     border-bottom: 1px solid black;
-    display: flex;
-    justify-content: space-around;
 }
 
-/* universal class */
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-}
 
 .card1 {
     display: flex;
-    gap: 20px;
+    max-width: 350px;
 }
 
 .card-logo i {
     font-size: 40px;
-
 }
 
 .card-logo {
-    /* border: 1px solid black; */
-    height: 70px;
     padding: 10px;
-    border-radius: 20px;
-
 }
 
-/* c3 heading */
-
+/* Card heading */
 .card-detail h3 {
     margin-bottom: 15px;
     font-family: "Raleway", sans-serif;
@@ -157,6 +204,14 @@ body {
     margin-bottom: 15px;
     font-family: "Raleway", sans-serif;
     font-weight: 200;
+}
+
+@media (max-width:690px){
+    .cards{
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+    
 }
 
 /* img section */
@@ -302,31 +357,26 @@ body {
 }
 
 /* container5 */
+
 .container5 {
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-    padding-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
 }
 
 .container5 .card1-c5 {
-    max-width: 300px;
-    border: 1px solid rgba(163, 160, 160, 0.342);
+    width: 100%;
+    min-width: 0;
+    border: 1px soli/d rgba(163, 160, 160, 0.342);
 }
 
 .container5 .img-c5 {
-    min-width: 300px;
+    width: 100%;
+    min-width: 0;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-.container5 .rating-c5 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 15px;
 }
 
 .card1-c5 img {
@@ -337,7 +387,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
 
+.container5 .rating-c5 {
+    display: flex;
+    /* flex-wrap: wrap/; */
+    gap: 10px;
+    padding: 10px 15px;
 }
 
 .container5 h3 {
@@ -353,8 +409,6 @@ body {
     background-color: rgb(102, 161, 13);
     padding: 2px;
     border-radius: 5px;
-
-
 }
 
 .container5 .p1-c5 {
@@ -383,6 +437,24 @@ body {
 
 .container5 h3:hover {
     color: orange;
+}
+
+/* Tablet */
+@media (max-width: 909px) {
+    .container5 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 0 20px 50px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container5 {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 20px 40px;
+    }
 }
 
 
@@ -540,64 +612,119 @@ span {
 
 
 /* container8 */
+
+
 .container8 {
     width: 100%;
-    height: 250px;
     background-color: rgba(128, 128, 128, 0.068);
-    padding-top: 100px;
-    flex-wrap: wrap;
+    padding: 100px 0px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
 }
 
+/* Main Grid Layout */
 .c8-section {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(180px, 1fr);
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.c8-img-name {
-    display: flex;
-    flex-direction: column;
-}
-
+/* Heading / Quote */
 .c8_heading {
-    width: 850px;
-    padding: 0px 10px;
+    min-width: 0;
+    padding: 0 10px;
 }
 
 .c8_heading h3 {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     color: #2f2f32d0;
-
+    margin: 0;
 }
 
-.c8-imgg {
-    border-radius: 100px;
-    border: 3px solid gray;
-    width: 80px;
+/* Profile Image + Name Wrapper */
+.c8-img {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    min-width: 0;
+}
 
+/* Profile Image */
+.c8-imgg {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid gray;
+}
+
+/* Name + Designation */
+.c8-img-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    min-width: 0;
 }
 
 .c8-img-name h4 {
     font-family: "Raleway", sans-serif;
     font-size: 20px;
     font-weight: 400;
+    margin: 0;
 }
 
 .c8-img-name span {
     font-family: "Raleway", sans-serif;
 }
 
-.c8-img-name {
-    padding: 13px 0px;
-}
-
-.c8-img {
-    padding: 0px 20px;
-}
-
 .c8-span {
     color: gray;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+    .container8 {
+        padding: 35px 20px;
+    }
+
+    .c8-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .c8_heading {
+        padding: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .container8 {
+        padding: 25px 15px;
+    }
+
+    .c8-section {
+        gap: 20px;
+    }
+
+    .c8-imgg {
+        width: 65px;
+        height: 65px;
+    }
+
+    .c8-img-name h4 {
+        font-size: 18px;
+    }
+}
+
+
 
 /* container 9   */
 
@@ -651,20 +778,20 @@ span {
 
 }
 
-.c9-card-boxes ul{
-     display: flex; 
+.c9-card-boxes ul {
+    display: flex;
     justify-content: space-between;
     flex: 1;
 
 
 }
 
-.c9-card-boxes a{
+.c9-card-boxes a {
     color: rgba(255, 255, 255, 0.685);
 
 }
 
-.c9-card-heading h3{
+.c9-card-heading h3 {
     color: rgba(255, 255, 255, 0.685);
 
 }
