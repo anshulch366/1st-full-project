@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-    color: #44a5cc;
+    color: #2e3e77;
 }
 
 
@@ -66,13 +66,13 @@ a:hover {
     border: none;
     border-radius: 25px;
     color: white;
-    background-color: #4681f0;
+    background-color: #2e3e77;
 }
 
 .navbutton button:hover {
     background-color: #ffffff;
-    color: #4681f0;
-    border: 1px solid #4681f0;
+    color: #2e3e77;
+    border: 1px solid #2e3e77;
 }
 
 .hidee {
@@ -173,12 +173,12 @@ a:hover {
     border-radius: 5px;
     border: none;
     color: white;
-    background-color: #4681f0;
+    background-color: #2e3e77;
 
     &:hover {
         background-color: white;
-        color: #4681f0;
-        border: 1px solid #4681f0;
+        color: #2e3e77;
+        border: 1px solid #2e3e77;
     }
 }
 
@@ -252,14 +252,14 @@ a:hover {
     padding: 15px 35px;
     border: none;
     color: #ffffff;
-    background-color: #4681f0;
-    border: 1px solid rgb(61, 151, 236);
+    background-color: #2e3e77;
+    border: 1px solid #2e3e77;
     border-radius: 25px;
 }
 
 .container2 button:hover {
     background-color: rgb(255, 255, 255);
-    color: #4681f0;
+    color: #2e3e77;
     transition: 0.1s;
 }
 
@@ -273,7 +273,7 @@ a:hover {
     font-family: "Raleway", sans-serif;
     font-size: 15px;
     font-weight: 200;
-    color: rgb(61, 151, 236);
+    color: #2e3e77;
 }
 
 /* img section  */
@@ -334,13 +334,13 @@ a:hover {
     padding: 15px 35px;
     border: none;
     color: rgb(255, 255, 255);
-    background-color: #4681f0;
+    background-color: #2e3e77;
     border-radius: 25px;
 
     &:hover {
         background-color: #ffffff;
-        color: #4681f0;
-        border: 1px solid #4681f0;
+        color: #2e3e77;
+        border: 1px solid #2e3e77;
     }
 }
 
@@ -357,14 +357,14 @@ a:hover {
     padding: 15px 35px;
     border: none;
     color: rgb(255, 255, 255);
-    background-color: #4681f0;
-    border: 1px solid rgb(61, 151, 236);
+    background-color: #2e3e77;
+    border: 1px solid #2e3e77;
     border-radius: 25px;
 }
 
 .container21 button:hover {
     background-color: rgb(255, 255, 255);
-    color: #4681f0;
+    color: #2e3e77;
 
 }
 
@@ -378,7 +378,7 @@ a:hover {
     font-family: "Raleway", sans-serif;
     font-size: 15px;
     font-weight: 200;
-    color: rgb(61, 151, 236);
+    color: #2e3e77;
 }
 
 /* container5 */
@@ -442,7 +442,7 @@ a:hover {
 }
 
 .container5 .p2-c5 {
-    color: rgb(49, 122, 233);
+    color: #2e3e77;
     font-size: 15px;
     font-family: "Raleway", sans-serif;
 }
@@ -499,39 +499,50 @@ a:hover {
 }
 
 span {
-    color: #4783f3;
+    color: #2e3e77;
     font-size: 15px;
 }
 
 
+
+
+
 /* /---------------events wrapper------------ */
-/* MAIN SECTION */
+
+   /* MAIN CONTAINER */
+
+
 .eventscontainer {
     width: 100%;
     background-color: #f7f8fa;
-    padding: 20px 20px 100px;
+    padding: 40px 20px 80px;
     box-sizing: border-box;
 }
 
-/* TWO-COLUMN GRID */
+.eventscontainer * {
+    box-sizing: border-box;
+}
+
+/* Two main sections */
+
 .eventscontainer .partent {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 27px;
+    gap: 30px;
     width: 100%;
-    max-width: 1090px;
+    max-width: 1200px;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
-/* LEFT AND RIGHT SECTIONS */
 .eventscontainer .event-box-1 {
     width: 100%;
     min-width: 0;
-    box-sizing: border-box;
 }
 
-/* SECTION HEADINGS */
+/* ==============================
+   SECTION HEADINGS
+============================== */
+
 .eventsintro span {
     display: block;
     color: #4885ff;
@@ -544,22 +555,25 @@ span {
     font-family: "Raleway", sans-serif;
     font-size: 26px;
     font-weight: 400;
+    line-height: 1.3;
     margin: 0 0 25px;
 }
 
-/* EVENT CARDS */
+/* ==============================
+   EVENT CARDS
+============================== */
+
 .eventpost {
     width: 100%;
     min-height: 130px;
     background-color: white;
     border: 1px solid #e3e3e3;
     border-radius: 3px;
-    margin: 0 0 27px;
-    padding: 20px 25px;
+    margin: 0 0 22px;
+    padding: 20px;
     display: flex;
     align-items: center;
-    gap: 23px;
-    box-sizing: border-box;
+    gap: 20px;
     transition: box-shadow 0.3s ease;
 }
 
@@ -567,10 +581,12 @@ span {
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
 }
 
-/* DATE BOX */
+/* Date box */
+
 .event-date {
     border: 2px solid #ff9d25;
     border-radius: 4px;
+    width: 72px;
     min-width: 72px;
     height: 72px;
     display: flex;
@@ -578,7 +594,6 @@ span {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    box-sizing: border-box;
     position: relative;
 }
 
@@ -615,7 +630,8 @@ span {
     color: #555;
 }
 
-/* EVENT DETAILS */
+/* Event information */
+
 .event-detail {
     min-width: 0;
     flex: 1;
@@ -625,7 +641,7 @@ span {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px 18px;
+    gap: 8px 15px;
     margin-bottom: 10px;
 }
 
@@ -635,6 +651,7 @@ span {
     gap: 7px;
     font-family: "Raleway", sans-serif;
     font-size: 12px;
+    line-height: 1.5;
     color: #858585;
     margin: 0;
 }
@@ -642,13 +659,14 @@ span {
 .c6-icon i {
     color: #ff9d25;
     font-size: 13px;
+    flex-shrink: 0;
 }
 
 .event-detail h3 {
     font-family: "Raleway", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.45;
+    line-height: 1.5;
     color: #2f2f32;
     margin: 0;
     overflow-wrap: anywhere;
@@ -659,21 +677,25 @@ span {
     color: #ff9d25;
 }
 
-/* RIGHT SIDE VIDEO LAYOUT */
+/* ==============================
+   VIDEO SECTION
+============================== */
+
 .video-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 27px;
+    gap: 25px;
 }
 
-/* LARGE VIDEO CARD */
+/* Main video card */
+
 .c6-box2 {
     width: 100%;
+    min-width: 0;
     height: 278px;
     margin: 0;
-    padding: 18px;
+    padding: 20px;
     border-radius: 4px;
-    box-sizing: border-box;
 
     background-image:
         linear-gradient(
@@ -694,7 +716,8 @@ span {
     position: relative;
 }
 
-/* PLAY BUTTON */
+/* Play buttons */
+
 .play-button {
     width: 48px;
     height: 48px;
@@ -711,13 +734,15 @@ span {
     transform: translate(-50%, -50%);
 }
 
-/* LARGE CARD TEXT */
+/* Video text */
+
 .video-text h3,
 .small-video h3 {
     font-family: "Raleway", sans-serif;
     color: white;
     font-size: 16px;
     font-weight: 400;
+    line-height: 1.5;
     margin: 0 0 8px;
 }
 
@@ -727,22 +752,24 @@ span {
     font-size: 13px;
 }
 
-/* SMALL VIDEO CARDS */
+/* Two small videos */
+
 .small-video-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 27px;
+    gap: 25px;
 }
 
 .small-video {
     min-width: 0;
-    height: 130px;
+    height: 150px;
     border-radius: 4px;
     padding: 15px 18px;
-    box-sizing: border-box;
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -779,24 +806,109 @@ span {
 
 .small-video h3 {
     font-size: 14px;
+    line-height: 1.4;
     margin: 0;
     position: relative;
     z-index: 1;
 }
 
-/* TABLET */
+/* ==============================
+   TABLET
+   768px - 900px
+============================== */
+
 @media (max-width: 900px) {
+
+    /* Stack the two main sections */
+
     .eventscontainer .partent {
-        gap: 22px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
+        max-width: 720px;
     }
 
+    .eventscontainer {
+        padding: 35px 24px 60px;
+    }
+
+    /* Give event cards enough room */
+
     .eventpost {
-        padding: 18px 14px;
-        gap: 14px;
+        padding: 20px;
+        gap: 20px;
     }
 
     .c6-icon {
-        gap: 8px;
+        gap: 8px 18px;
+    }
+
+    .c6-icon p {
+        font-size: 12px;
+    }
+
+    .event-detail h3 {
+        font-size: 16px;
+    }
+
+    /* Video sizes */
+
+    .c6-box2 {
+        height: 320px;
+    }
+
+    .small-video {
+        height: 170px;
+    }
+}
+
+/* ==============================
+   MOBILE
+   481px - 767px
+============================== */
+
+@media (max-width: 767px) {
+
+    .eventscontainer {
+        padding: 30px 18px 45px;
+    }
+
+    .eventscontainer .partent {
+        gap: 35px;
+    }
+
+    .eventsintro h3 {
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+
+    /* Event cards */
+
+    .eventpost {
+        align-items: flex-start;
+        padding: 18px 14px;
+        gap: 14px;
+        margin-bottom: 18px;
+    }
+
+    .event-date {
+        width: 62px;
+        min-width: 62px;
+        height: 66px;
+    }
+
+    .event-date h4 {
+        font-size: 21px;
+    }
+
+    .event-detail {
+        flex: 1;
+    }
+
+    .c6-icon {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+        margin-bottom: 10px;
     }
 
     .c6-icon p {
@@ -804,11 +916,124 @@ span {
     }
 
     .event-detail h3 {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Video cards */
+
+    .c6-box2 {
+        height: 260px;
+        padding: 16px;
+    }
+
+    .video-grid {
+        gap: 18px;
+    }
+
+    .small-video-grid {
+        gap: 15px;
+    }
+
+    .small-video {
+        height: 140px;
+        padding: 12px;
+    }
+
+    .small-video h3 {
+        font-size: 13px;
+    }
+
+    .video-text h3 {
         font-size: 15px;
     }
-}
-   
 
+    .small-video .play-button {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* ==============================
+   SMALL MOBILE
+   480px and below
+============================== */
+
+@media (max-width: 480px) {
+
+    .eventscontainer {
+        padding: 25px 14px 35px;
+    }
+
+    .eventscontainer .partent {
+        gap: 30px;
+    }
+
+    .eventsintro span {
+        font-size: 12px;
+    }
+
+    .eventsintro h3 {
+        font-size: 22px;
+    }
+
+    /* Compact event cards */
+
+    .eventpost {
+        padding: 15px 11px;
+        gap: 12px;
+    }
+
+    .event-date {
+        width: 54px;
+        min-width: 54px;
+        height: 60px;
+    }
+
+    .event-date h4 {
+        font-size: 19px;
+    }
+
+    .event-date p {
+        font-size: 12px;
+    }
+
+    .c6-icon p {
+        font-size: 10px;
+        gap: 5px;
+    }
+
+    .event-detail h3 {
+        font-size: 13px;
+    }
+
+    /* Main video */
+
+    .c6-box2 {
+        height: 230px;
+    }
+
+    .play-button {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* Stack the small videos */
+
+    .small-video-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .small-video {
+        height: 170px;
+        padding: 15px;
+    }
+
+    .small-video h3 {
+        font-size: 14px;
+    }
+}
 
 /* container8 */
 
@@ -927,101 +1152,418 @@ span {
 
 /* container 9   */
 
+
+/* =========================
+   FOOTER MAIN
+========================= */
+
 .container9 {
     background-color: #2e3e77;
-    height: 500px;
-    /* display: flex; */
-}
+    color: white;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 0;
+    margin-top: 0;
+}  
+
+/* Main 3-column grid */
 
 .c9-container {
-    display: flex;
-
+    display: grid;
+    grid-template-columns: 1fr 1.05fr 1.15fr;
+    gap: 60px;
+    padding-top: 0;
+    padding-bottom: 75px;
+    align-items: start;
 }
+
+/* =========================
+   SECTION 1: LOGO
+========================= */
 
 .c9-card1 {
-    width: 300px;
-    padding: 20px 10px;
-}
-
-.c9-card1 p {
-    font-family: "Raleway", sans-serif;
-    color: rgba(255, 255, 255, 0.685);
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    padding-bottom: 25px;
+    min-width: 0;
 }
 
 .c9-logo {
-    padding-top: 50px;
+    padding-top: 0;
     padding-bottom: 25px;
 }
 
-/* card padding  */
+.c9-logo img {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+}
 
-.c9-card1 span {
-    color: rgba(255, 255, 255, 0.685);
-
+.c9-para p {
     font-family: "Raleway", sans-serif;
-
+    color: rgba(255, 255, 255, 0.685);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 25px;
 }
 
-.c9-location {
-    padding-bottom: 25px;
+.c9-location,
+.c9-number {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
 }
+
+.c9-location i,
+.c9-number i {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 19px;
+    width: 20px;
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+
+.c9-location span,
+.c9-number span {
+    color: rgba(255, 255, 255, 0.685);
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+/* =========================
+   SECTION 2: QUICK LINKS
+========================= */
 
 .c9-card2 {
-    width: 300px;
-    padding: 20px 10px;
-    flex: 1;
+    min-width: 0;
+    padding-top: 12px;
+}
 
+.c9-card-heading h3 {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 0 35px;
+}
+
+.c9-card-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
 .c9-card-boxes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: space-between;
-    flex: 1;
+    flex-direction: column;
+    gap: 14px;
+}
 
-
+.c9-card-boxes li {
+    margin: 0;
+    padding: 0;
 }
 
 .c9-card-boxes a {
     color: rgba(255, 255, 255, 0.685);
-
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.c9-card-heading h3 {
+.c9-card-boxes a:hover {
+    color: #ffa32b;
+}
+
+/* =========================
+   SECTION 3: NEWSLETTER
+========================= */
+
+.c9-card3 {
+    min-width: 0;
+    padding-top: 12px;
+}
+
+.c9-card3 > p {
     color: rgba(255, 255, 255, 0.685);
-
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 20px;
 }
 
-
-.container {
-    width: min(calc(100% - 40px), 1200px);
-    margin-inline: auto;
+.c9-newsletter {
+    display: flex;
+    width: 100%;
+    min-width: 0;
 }
 
-.hero {
-    background-position: center;
+.c9-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+    background-color: white;
+    padding: 0 15px;
+    height: 45px;
 }
 
-.container3 img {
-    object-fit: cover;
+.c9-input i {
+    color: #536078;
+    font-size: 15px;
+    flex-shrink: 0;
 }
 
-.container5 .img-c5 {
-    aspect-ratio: 4 / 3;
+.c9-input input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #333;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
 }
 
-.container5 .img-c5 img {
-    display: block;
-    object-fit: cover;
+.c9-input input::placeholder {
+    color: #737b87;
 }
 
-.container9 {
-    height: auto;
-    min-height: 400px;
+.c9-newsletter button {
+    background-color: #ffa32b;
+    color: white;
+    border: none;
+    padding: 0 22px;
+    height: 45px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
 }
+
+.c9-newsletter button:hover {
+    background-color: #ed901b;
+}
+
+/* =========================
+   BOTTOM FOOTER
+========================= */
+
+.c9-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.c9-copyright p {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.c9-copyright span {
+    color: #ffa32b;
+}
+
+.c9-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.c9-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.055);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.c9-social a:hover {
+    background-color: #ffa32b;
+}
+
+/* =========================
+   TABLET: 768px - 1024px
+========================= */
+
+@media (max-width: 1024px) {
+
+    .c9-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px 35px;
+        padding-bottom: 55px;
+    }
+
+    .c9-card1 {
+        grid-column: 1;
+    }
+
+    .c9-card2 {
+        grid-column: 2;
+    }
+
+    .c9-card3 {
+        grid-column: 1 / -1;
+        max-width: 550px;
+        width: 100%;
+    }
+
+    .c9-card3 .c9-card-heading h3 {
+        margin-bottom: 20px;
+    }
+
+    .c9-newsletter {
+        max-width: 480px;
+    }
+
+    .c9-bottom {
+        min-height: 90px;
+    }
+}
+
+/* =========================
+   MOBILE: 767px and below
+========================= */
+
+@media (max-width: 767px) {
+
+    .container9 {
+        padding-top: 40px;
+    }
+
+    .c9-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-bottom: 40px;
+    }
+
+    .c9-card1,
+    .c9-card2,
+    .c9-card3 {
+        grid-column: auto;
+        width: 100%;
+        max-width: none;
+    }
+
+    .c9-logo {
+        padding-bottom: 20px;
+    }
+
+    .c9-logo img {
+        width: 165px;
+    }
+
+    .c9-para p {
+        max-width: 400px;
+    }
+
+    .c9-location,
+    .c9-number {
+        margin-bottom: 18px;
+    }
+
+    .c9-card2,
+    .c9-card3 {
+        padding-top: 0;
+    }
+
+    .c9-card-heading h3 {
+        margin-bottom: 22px;
+    }
+
+    .c9-card-boxes {
+        gap: 20px;
+    }
+
+    .c9-card-boxes ul {
+        gap: 16px;
+    }
+
+    .c9-newsletter {
+        width: 100%;
+    }
+
+    .c9-input {
+        padding: 0 10px;
+        gap: 8px;
+    }
+
+    .c9-input input {
+        font-size: 13px;
+    }
+
+    .c9-newsletter button {
+        padding: 0 14px;
+        font-size: 13px;
+    }
+
+    .c9-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .c9-social {
+        gap: 10px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE: 380px and below
+========================= */
+
+@media (max-width: 380px) {
+
+    .c9-card-boxes {
+        gap: 12px;
+    }
+
+    .c9-card-boxes a {
+        font-size: 13px;
+    }
+
+    .c9-newsletter button {
+        padding: 0 10px;
+    }
+
+    .c9-input {
+        gap: 6px;
+        padding: 0 8px;
+    }
+
+    .c9-input input {
+        font-size: 12px;
+    }
+
+    .c9-copyright p {
+        font-size: 12px;
+    }
+}
+
 
 @media (max-width: 909px) {
     .navbar {
