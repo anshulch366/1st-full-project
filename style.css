@@ -138,60 +138,163 @@ a:hover {
 }
 
 
+
+
+
 /* hero section */
+
 .hero {
-    background-image: url("./img/slider-image-3.jpg");
-    background-size: cover;
-    background-position: relative;
-    height: 85vh;
+    position: relative;
     width: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    height: 85vh;
     background-color: white;
-    /* box-sizing: border-box; */
-
-
+    overflow: hidden;
 }
 
-.box1 {
-    max-width: 450px;
-    /* height: 230px; */
-    /* flex-wrap: wrap; */
-    padding: 20px 40px;
+/* Background slider */
+.hero-slides {
     position: absolute;
-    
-    top: 30%;
+    inset: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: translateX(100%);
+    transition: transform 0.8s ease-in-out;
+}
+
+.hero-slide.active {
+    transform: translateX(0);
+}
+
+/* White text containers */
+.box1 {
+    width: calc(100% - 40px);
+    max-width: 450px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 50%;
     left: 20%;
+    transform: translateY(-50%);
+
     background-color: white;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.158);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.16);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 2;
 }
 
-
-.herobutton button {
-    padding: 15px 35px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    background-color: #2e3e77;
-
-    &:hover {
-        background-color: white;
-        color: #2e3e77;
-        border: 1px solid #2e3e77;
-    }
+.box1.active {
+    opacity: 1;
+    visibility: visible;
 }
 
+/* Heading */
 .heading1 h1 {
+    margin-top: 15px;
     margin-bottom: 20px;
     font-family: "Raleway", sans-serif;
     font-weight: 300;
-
 }
 
+/* Description */
 .para1 {
     margin-bottom: 20px;
 }
+
+/* Button */
+.herobutton button {
+    padding: 15px 35px;
+    border-radius: 5px;
+    border: 1px solid #2e3e77;
+    color: white;
+    background-color: #2e3e77;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.herobutton button:hover {
+    background-color: white;
+    color: #2e3e77;
+}
+
+/* Slider arrows */
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(46, 62, 119, 0.8);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.hero-arrow:hover {
+    background-color: #2e3e77;
+}
+
+.hero-arrow.prev {
+    left: 20px;
+}
+
+.hero-arrow.next {
+    right: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        min-height: 450px;
+    }
+
+    .box1 {
+        left: 50%;
+        width: calc(100% - 70px);
+        padding: 20px 25px;
+        transform: translate(-50%, -50%);
+    }
+
+    .heading1 h1 {
+        font-size: 27px;
+    }
+
+    .hero-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .hero-arrow.prev {
+        left: 8px;
+    }
+
+    .hero-arrow.next {
+        right: 8px;
+    }
+}
+
+
 
 /* cards  */
 
