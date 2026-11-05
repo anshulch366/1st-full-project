@@ -10,7 +10,9 @@ function Menu() {
 }
 
 
-// hero section 
+// =========================
+// HERO SECTION
+// =========================
 
 const slides = document.querySelectorAll(".hero-slide");
 const textBoxes = document.querySelectorAll(".box1");
@@ -22,8 +24,17 @@ let currentIndex = 0;
 let isAnimating = false;
 let autoSlide;
 
-// Show the selected slide
+
+// IMPORTANT: Activate first image and first text box
+slides[0].classList.add("active");
+slides[0].style.transform = "translateX(0)";
+
+textBoxes[0].classList.add("active");
+
+
+// Show selected slide
 function showSlide(newIndex, direction = "next") {
+
     if (isAnimating || newIndex === currentIndex) return;
 
     isAnimating = true;
@@ -31,8 +42,9 @@ function showSlide(newIndex, direction = "next") {
     const currentSlide = slides[currentIndex];
     const nextSlide = slides[newIndex];
 
-    // Prepare the incoming image
+    // Prepare incoming image
     nextSlide.style.transition = "none";
+
     nextSlide.style.transform =
         direction === "next"
             ? "translateX(100%)"
@@ -40,7 +52,7 @@ function showSlide(newIndex, direction = "next") {
 
     nextSlide.classList.add("active");
 
-    // Apply starting position before animation
+    // Apply starting position
     nextSlide.offsetWidth;
 
     // Animate both images
@@ -54,7 +66,7 @@ function showSlide(newIndex, direction = "next") {
 
     nextSlide.style.transform = "translateX(0)";
 
-    // Alternate between the two text containers
+    // Change text boxes
     const nextTextIndex = newIndex % 2;
 
     textBoxes.forEach((box, index) => {
@@ -63,8 +75,9 @@ function showSlide(newIndex, direction = "next") {
 
     currentIndex = newIndex;
 
-    // Clean up after the image transition
+    // Cleanup
     setTimeout(() => {
+
         currentSlide.classList.remove("active");
 
         currentSlide.style.transition = "";
@@ -73,38 +86,56 @@ function showSlide(newIndex, direction = "next") {
         nextSlide.style.transition = "";
 
         isAnimating = false;
+
     }, 850);
 }
 
+
 // Next image
 function nextSlide() {
+
     const newIndex = (currentIndex + 1) % slides.length;
+
     showSlide(newIndex, "next");
 }
 
+
 // Previous image
 function prevSlide() {
+
     const newIndex =
         (currentIndex - 1 + slides.length) % slides.length;
 
     showSlide(newIndex, "prev");
 }
 
-// Restart automatic timer after manual navigation
+
+// Restart automatic timer
 function resetAutoSlide() {
+
     clearInterval(autoSlide);
-    autoSlide = setInterval(nextSlide, 3000);
+
+    autoSlide = setInterval(nextSlide, 5000);
 }
 
+
+// Next button
 nextButton.addEventListener("click", () => {
+
     nextSlide();
     resetAutoSlide();
+
 });
 
+
+// Previous button
 prevButton.addEventListener("click", () => {
+
     prevSlide();
     resetAutoSlide();
+
 });
 
-// Automatically change images every 3 seconds
-autoSlide = setInterval(nextSlide, 3000);
+
+// Automatic slider: 5 seconds
+autoSlide = setInterval(nextSlide, 5000);
